@@ -1,3 +1,6 @@
+## Citation
+
+```bibtex
 @software{pate_hcn_nu2_rovib_2026,
   author       = {Patel, Dhwanil},
   title        = {Simulating Ro-vibrational spectrum of HCN},
