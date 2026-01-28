@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<Mixture Version="PGOPHER 11.0.138 10 Dec 2020 18:41  64 bit (fpc 3.3.1 x86_64-Darwin)" ShowFortrat="True" AllowComplex="True">
+  <Species Name="Species" Jmax="100">
+    <LinearMolecule Name="LinearMolecule">
+      <LinearManifold Name="Ground" Initial="True" LimitSearch="True">
+        <Linear Name="v=0">
+          <Parameter Name="B" Value="1.47822125338567" Float="true" StdDev="6.07440501333565E-8"/>
+          <Parameter Name="D" Value="2.90677381304143E-6" Float="true" StdDev="9.0320460073393E-11"/>
+        </Linear>
+      </LinearManifold>
+      <LinearManifold Name="Excited" LimitSearch="True">
+        <Linear Name="v=1" Lambda="Pi">
+          <Parameter Name="Origin" Value="711.979570744444" Float="true" StdDev="1.06867462614213E-6"/>
+          <Parameter Name="B" Value="1.48177797873928" Float="true" StdDev="5.99765308476872E-8"/>
+          <Parameter Name="q" Value="-0.00748765981037666" Float="true" StdDev="1.92809062654476E-8"/>
+          <Parameter Name="D" Value="2.97355950976974E-6" Float="true" StdDev="8.88273666708901E-11"/>
+          <Parameter Name="qD" Value="8.80347694923625E-8" Float="true" StdDev="5.6752174165677E-11"/>
+        </Linear>
+      </LinearManifold>
+      <TransitionMoments Bra="Excited" Ket="Ground">
+        <SphericalTransitionMoment Bra="v=1" Ket="v=0"/>
+      </TransitionMoments>
+    </LinearMolecule>
+  </Species>
+  <Correlations Name="Correlations">
+    <Correlation Row="Species.LinearMolecule.Ground.v=0.D" Col="Species.LinearMolecule.Ground.v=0.B" Value="0.912080147677215"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.Origin" Col="Species.LinearMolecule.Ground.v=0.B" Value="0.130101204302289"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.Origin" Col="Species.LinearMolecule.Ground.v=0.D" Value="0.164420698089272"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.B" Col="Species.LinearMolecule.Ground.v=0.B" Value="0.973324614907531"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.B" Col="Species.LinearMolecule.Ground.v=0.D" Value="0.870169160863832"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.B" Col="Species.LinearMolecule.Excited.v=1.Origin" Value="-0.0377994328374156"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.q" Col="Species.LinearMolecule.Ground.v=0.B" Value="-0.0923064640887503"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.q" Col="Species.LinearMolecule.Ground.v=0.D" Value="-0.139662838726812"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.q" Col="Species.LinearMolecule.Excited.v=1.Origin" Value="0.123116846854557"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.q" Col="Species.LinearMolecule.Excited.v=1.B" Value="-0.202947813817425"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.D" Col="Species.LinearMolecule.Ground.v=0.B" Value="0.864471502170302"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.D" Col="Species.LinearMolecule.Ground.v=0.D" Value="0.928761464590589"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.D" Col="Species.LinearMolecule.Excited.v=1.Origin" Value="-0.0460756774337616"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.D" Col="Species.LinearMolecule.Excited.v=1.B" Value="0.905292352781027"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.D" Col="Species.LinearMolecule.Excited.v=1.q" Value="-0.356783292035835"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.qD" Col="Species.LinearMolecule.Ground.v=0.B" Value="0.0903234247211428"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.qD" Col="Species.LinearMolecule.Ground.v=0.D" Value="0.140773017038302"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.qD" Col="Species.LinearMolecule.Excited.v=1.Origin" Value="-0.152554910913597"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.qD" Col="Species.LinearMolecule.Excited.v=1.B" Value="0.212202477282863"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.qD" Col="Species.LinearMolecule.Excited.v=1.q" Value="-0.955145341844921"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.qD" Col="Species.LinearMolecule.Excited.v=1.D" Value="0.390948520436693"/>
+  </Correlations>
+  <Parameter Name="Temperature" Value="296"/>
+  <Parameter Name="Fmin" Value="492.027257"/>
+  <Parameter Name="Fmax" Value="908.00326226"/>
+  <FormSettings Name="LevelWindow" XMax="86">
+    <Parameter Name="Ymax" Value="713.5"/>
+    <Parameter Name="Ymin" Value="709"/>
+    <Parameter Name="Reduction" Value="1.48177797873929"/>
+  </FormSettings>
+  <FormSettings Name="LogWindow" ObsFileName="69778494.par" FitType="Intensity"/>
+  <FormSettings Name="ConstantsWindow" ActiveObject="Linear: Species - LinearMolecule - Excited - v=1"/>
+  <FormSettings Name="LineWindow" FirstLine="50" LastLine="51"
+Lines="
+LinearMolecule	Excited	22	0	1	Ground	23	1	1	644.022333		.001553550197142658	0	P(23)	Excited v=1 22 e - Ground v=0 23 e
+LinearMolecule	Excited	21	1	1	Ground	22	0	1	646.970327	1	.001961185544670796	0	P(22)	Excited v=1 21 e - Ground v=0 22 e : 69778494.par
+LinearMolecule	Excited	20	0	1	Ground	21	1	1	649.919353	1	.00244032710005047	0	P(21)	Excited v=1 20 e - Ground v=0 21 e : 69778494.par
+LinearMolecule	Excited	19	1	1	Ground	20	0	1	652.8693510000001	1	.00299234859620375	0	P(20)	Excited v=1 19 e - Ground v=0 20 e : 69778494.par
+LinearMolecule	Excited	18	0	1	Ground	19	1	1	655.820265	1	.00361487684967229	0	P(19)	Excited v=1 18 e - Ground v=0 19 e : 69778494.par
+LinearMolecule	Excited	17	1	1	Ground	18	0	1	658.772035	1	.004300849233766687	0	P(18)	Excited v=1 17 e - Ground v=0 18 e : 69778494.par
+LinearMolecule	Excited	16	0	1	Ground	17	1	1	661.724602	1	.005037690182798958	0	P(17)	Excited v=1 16 e - Ground v=0 17 e : 69778494.par
+LinearMolecule	Excited	15	1	1	Ground	16	0	1	664.677905	1	.005806718671890832	0	P(16)	Excited v=1 15 e - Ground v=0 16 e : 69778494.par
+LinearMolecule	Excited	14	0	1	Ground	15	1	1	667.631884	1	.006582903602686859	0	P(15)	Excited v=1 14 e - Ground v=0 15 e : 69778494.par
+LinearMolecule	Excited	13	1	1	Ground	14	0	1	670.586477	1	.007335076112460006	0	P(14)	Excited v=1 13 e - Ground v=0 14 e : 69778494.par
+LinearMolecule	Excited	12	0	1	Ground	13	1	1	673.541623	1	.00802668482024793	0	P(13)	Excited v=1 12 e - Ground v=0 13 e : 69778494.par
+LinearMolecule	Excited	11	1	1	Ground	12	0	1	676.497258	1	.008617141412815077	0	P(12)	Excited v=1 11 e - Ground v=0 12 e : 69778494.par
+LinearMolecule	Excited	10	0	1	Ground	11	1	1	679.453321	1	.009063751393699122	0	P(11)	Excited v=1 10 e - Ground v=0 11 e : 69778494.par
+LinearMolecule	Excited	9	1	1	Ground	10	0	1	682.409746	1	.009324162281213176	0	P(10)	Excited v=1  9 e - Ground v=0 10 e : 69778494.par
+LinearMolecule	Excited	8	0	1	Ground	9	1	1	685.3664710000001	1	.009359195290694962	0	P(9)	Excited v=1  8 e - Ground v=0  9 e : 69778494.par
+LinearMolecule	Excited	7	1	1	Ground	8	0	1	688.323429	1	.009135864506996052	0	P(8)	Excited v=1  7 e - Ground v=0  8 e : 69778494.par
+LinearMolecule	Excited	6	0	1	Ground	7	1	1	691.280557	1	.009580248378793599	0	P(7)	Excited v=1  6 e - Ground v=0  7 e : 69778494.par
+LinearMolecule	Excited	5	1	1	Ground	6	0	1	694.237788	1	.007830570912459036	0	P(6)	Excited v=1  5 e - Ground v=0  6 e : 69778494.par
+LinearMolecule	Excited	4	0	1	Ground	5	1	1	697.195054	1	.007697026404081244	0	P(5)	Excited v=1  4 e - Ground v=0  5 e : 69778494.par
+LinearMolecule	Excited	3	1	1	Ground	4	0	1	700.152291	1	.005370367505377713	0	P(4)	Excited v=1  3 e - Ground v=0  4 e : 69778494.par
+LinearMolecule	Excited	2	0	1	Ground	3	1	1	703.109429	1	.003758592394855727	0	P(3)	Excited v=1  2 e - Ground v=0  3 e : 69778494.par
+LinearMolecule	Excited	1	1	1	Ground	2	0	1	706.0664	1	.001949079696658464	0	P(2)	Excited v=1  1 e - Ground v=0  2 e : 69778494.par
+LinearMolecule	Excited	1	0	1	Ground	1	1	1	711.9941700000001	1	.005984176822101802	0	Q(1)	Excited v=1  1 f - Ground v=0  1 e : 69778494.par
+LinearMolecule	Excited	2	1	1	Ground	2	0	1	712.023369	1	.009734402787766367	0	Q(2)	Excited v=1  2 f - Ground v=0  2 e : 69778494.par
+LinearMolecule	Excited	3	0	1	Ground	3	1	1	712.0671610000001	1	.01314079274571868	0	Q(3)	Excited v=1  3 f - Ground v=0  3 e : 69778494.par
+LinearMolecule	Excited	4	1	1	Ground	4	0	1	712.125538	1	.01609453098635531	0	Q(4)	Excited v=1  4 f - Ground v=0  4 e : 69778494.par
+LinearMolecule	Excited	5	0	1	Ground	5	1	1	712.198488	1	.0185126616528286	0	Q(5)	Excited v=1  5 f - Ground v=0  5 e : 69778494.par
+LinearMolecule	Excited	6	1	1	Ground	6	0	1	712.2859999999998	1	.02034173378058669	0	Q(6)	Excited v=1  6 f - Ground v=0  6 e : 69778494.par
+LinearMolecule	Excited	7	0	1	Ground	7	1	1	712.388056	1	.02155918706542956	0	Q(7)	Excited v=1  7 f - Ground v=0  7 e : 69778494.par
+LinearMolecule	Excited	8	1	1	Ground	8	0	1	712.5046389999999	1	.02217249795646488	0	Q(8)	Excited v=1  8 f - Ground v=0  8 e : 69778494.par
+LinearMolecule	Excited	9	0	1	Ground	9	1	1	712.635726	1	.02221631149608008	0	Q(9)	Excited v=1  9 f - Ground v=0  9 e : 69778494.par
+LinearMolecule	Excited	10	1	1	Ground	10	0	1	712.781294	1	.02174795247652827	0	Q(10)	Excited v=1 10 f - Ground v=0 10 e : 69778494.par
+LinearMolecule	Excited	11	0	1	Ground	11	1	1	712.941315	1	.02084182354293526	0	Q(11)	Excited v=1 11 f - Ground v=0 11 e : 69778494.par
+LinearMolecule	Excited	12	1	1	Ground	12	0	1	713.115762	1	.01958324953558128	0	Q(12)	Excited v=1 12 f - Ground v=0 12 e : 69778494.par
+LinearMolecule	Excited	13	0	1	Ground	13	1	1	713.3046020000001	1	.01806231685207098	0	Q(13)	Excited v=1 13 f - Ground v=0 13 e : 69778494.par
+LinearMolecule	Excited	14	1	1	Ground	14	0	1	713.5078	1	.01533312735083252	0	Q(14)	Excited v=1 14 f - Ground v=0 14 e : 69778494.par
+LinearMolecule	Excited	15	0	1	Ground	15	1	1	713.72532	1	.01321566382895671	0	Q(15)	Excited v=1 15 f - Ground v=0 15 e : 69778494.par
+LinearMolecule	Excited	16	1	1	Ground	16	0	1	713.957121	1	.01278459270930061	0	Q(16)	Excited v=1 16 f - Ground v=0 16 e : 69778494.par
+LinearMolecule	Excited	17	0	1	Ground	17	1	1	714.203162	1	.01103108509125456	0	Q(17)	Excited v=1 17 f - Ground v=0 17 e : 69778494.par
+LinearMolecule	Excited	18	1	1	Ground	18	0	1	714.463398	1	.007585958510331492	0	Q(18)	Excited v=1 18 f - Ground v=0 18 e : 69778494.par
+LinearMolecule	Excited	19	0	1	Ground	19	1	1	714.737782	1	.006087417689044197	0	Q(19)	Excited v=1 19 f - Ground v=0 19 e : 69778494.par
+LinearMolecule	Excited	1	1	1	Ground	0	0	1	714.935627	1	.004038180830228241	0	R(0)	Excited v=1  1 e - Ground v=0  0 e : 69778494.par
+LinearMolecule	Excited	20	1	1	Ground	20	0	1	715.026263	1	.006468955777475088	0	Q(20)	Excited v=1 20 f - Ground v=0 20 e : 69778494.par
+LinearMolecule	Excited	2	0	1	Ground	1	1	1	717.89124	1	.005991107245932226	0	R(1)	Excited v=1  2 e - Ground v=0  1 e : 69778494.par
+LinearMolecule	Excited	3	1	1	Ground	2	0	1	720.846338	1	.007796318786633861	0	R(2)	Excited v=1  3 e - Ground v=0  2 e : 69778494.par
+LinearMolecule	Excited	4	0	1	Ground	3	1	1	723.800848	1	.009396480987139317	0	R(3)	Excited v=1  4 e - Ground v=0  3 e : 69778494.par
+LinearMolecule	Excited	5	1	1	Ground	4	0	1	726.7547	1	.01074073501075543	0	R(4)	Excited v=1  5 e - Ground v=0  4 e : 69778494.par
+LinearMolecule	Excited	6	0	1	Ground	5	1	1	729.70782	1	.01179207377225519	0	R(5)	Excited v=1  6 e - Ground v=0  5 e : 69778494.par
+LinearMolecule	Excited	7	1	1	Ground	6	0	1	732.660136	1	.01251792654918638	0	R(6)	Excited v=1  7 e - Ground v=0  6 e : 69778494.par
+LinearMolecule	Excited	8	0	1	Ground	7	1	1	735.611573	1	.01294550766156633	0	R(7)	Excited v=1  8 e - Ground v=0  7 e : 69778494.par
+LinearMolecule	Excited	9	1	1	Ground	8	0	1	738.562058	1	.01305123500999436	0	R(8)	Excited v=1  9 e - Ground v=0  8 e : 69778494.par
+LinearMolecule	Excited	10	0	1	Ground	9	1	1	741.511516	1	.01286889352470557	0	R(9)	Excited v=1 10 e - Ground v=0  9 e : 69778494.par
+LinearMolecule	Excited	11	1	1	Ground	10	0	1	744.459871	1	.01243221637495091	0	R(10)	Excited v=1 11 e - Ground v=0 10 e : 69778494.par
+LinearMolecule	Excited	12	0	1	Ground	11	1	1	747.407049	1	.01178287681180886	0	R(11)	Excited v=1 12 e - Ground v=0 11 e : 69778494.par
+LinearMolecule	Excited	13	1	1	Ground	12	0	1	750.352972	1	.01096727088903738	0	R(12)	Excited v=1 13 e - Ground v=0 12 e : 69778494.par
+LinearMolecule	Excited	14	0	1	Ground	13	1	1	753.297564	1	.01003335602530991	0	R(13)	Excited v=1 14 e - Ground v=0 13 e : 69778494.par
+LinearMolecule	Excited	15	1	1	Ground	14	0	1	756.2407480000001	1	.009027785984566161	0	R(14)	Excited v=1 15 e - Ground v=0 14 e : 69778494.par
+LinearMolecule	Excited	16	0	1	Ground	15	1	1	759.182446	1	.007993525803262619	0	R(15)	Excited v=1 16 e - Ground v=0 15 e : 69778494.par
+LinearMolecule	Excited	17	1	1	Ground	16	0	1	762.122579	1	.006968062406269	0	R(16)	Excited v=1 17 e - Ground v=0 16 e : 69778494.par
+LinearMolecule	Excited	18	0	1	Ground	17	1	1	765.061068	1	.00598225709207376	0	R(17)	Excited v=1 18 e - Ground v=0 17 e : 69778494.par
+LinearMolecule	Excited	19	1	1	Ground	18	0	1	767.997835	1	.005059822627960807	0	R(18)	Excited v=1 19 e - Ground v=0 18 e : 69778494.par
+LinearMolecule	Excited	20	0	1	Ground	19	1	1	770.9327980000001	1	.004217356324617672	0	R(19)	Excited v=1 20 e - Ground v=0 19 e : 69778494.par
+LinearMolecule	Excited	21	1	1	Ground	20	0	1	773.865879	1	.003464824690341183	0	R(20)	Excited v=1 21 e - Ground v=0 20 e : 69778494.par
+LinearMolecule	Excited	22	0	1	Ground	21	1	1	776.796995	1	.002806376165058042	0	R(21)	Excited v=1 22 e - Ground v=0 21 e : 69778494.par
+LinearMolecule	Excited	23	1	1	Ground	22	0	1	779.726066	1	.002241354908195195	0	R(22)	Excited v=1 23 e - Ground v=0 22 e : 69778494.par
+LinearMolecule	Excited	24	0	1	Ground	23	1	1	782.653009	1	.001765397951298476	0	R(23)	Excited v=1 24 e - Ground v=0 23 e : 69778494.par
+"/>
+  <FormSettings Name="OverlayWindow" ActiveObject="ExperimentalPlot: Overlays - 69778494.par"/>
+</Mixture>

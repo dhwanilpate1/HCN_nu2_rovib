@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Mixture Version="PGOPHER 11.0.138 10 Dec 2020 18:41  64 bit (fpc 3.3.1 x86_64-Darwin)" ShowFortrat="True" AllowComplex="True">
+  <Species Name="Species" Jmax="100">
+    <LinearMolecule Name="LinearMolecule">
+      <LinearManifold Name="Ground" Initial="True" LimitSearch="True">
+        <Linear Name="v=0">
+          <Parameter Name="B" Value="1.4764903967496" Float="true" StdDev="0.000124513671114646"/>
+        </Linear>
+      </LinearManifold>
+      <LinearManifold Name="Excited" LimitSearch="True">
+        <Linear Name="v=1" Lambda="Pi">
+          <Parameter Name="Origin" Value="711.978315488746" Float="true" StdDev="0.00739942564229292"/>
+          <Parameter Name="B" Value="1.48050577314209" Float="true" StdDev="0.0000912237126455909"/>
+          <Parameter Name="q" Value="-0.00858096814812178" Float="true" StdDev="0.000182447425186626"/>
+          <Parameter Name="D" Value="-8.56665524967303E-7" Float="true" StdDev="6.2918429476062E-7"/>
+          <Parameter Name="H" Value="-1.59504742042685E-9" Float="true" StdDev="7.50542609701606E-10"/>
+        </Linear>
+      </LinearManifold>
+      <TransitionMoments Bra="Excited" Ket="Ground">
+        <SphericalTransitionMoment Bra="v=1" Ket="v=0"/>
+      </TransitionMoments>
+    </LinearMolecule>
+  </Species>
+  <Correlations Name="Correlations">
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.Origin" Col="Species.LinearMolecule.Ground.v=0.B" Value="0.0409400217607394"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.B" Col="Species.LinearMolecule.Ground.v=0.B" Value="0.63316227945308"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.B" Col="Species.LinearMolecule.Excited.v=1.Origin" Value="-0.575478871594163"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.q" Col="Species.LinearMolecule.Ground.v=0.B" Value="0.6331622801265"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.q" Col="Species.LinearMolecule.Excited.v=1.Origin" Value="-0.57547887127306"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.q" Col="Species.LinearMolecule.Excited.v=1.B" Value="1"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.D" Col="Species.LinearMolecule.Ground.v=0.B" Value="-0.10811100587915"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.D" Col="Species.LinearMolecule.Excited.v=1.Origin" Value="-0.637544166036544"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.D" Col="Species.LinearMolecule.Excited.v=1.B" Value="0.669818130273053"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.D" Col="Species.LinearMolecule.Excited.v=1.q" Value="0.669818129570961"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.H" Col="Species.LinearMolecule.Ground.v=0.B" Value="-0.162769471068154"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.H" Col="Species.LinearMolecule.Excited.v=1.Origin" Value="-0.547973907654221"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.H" Col="Species.LinearMolecule.Excited.v=1.B" Value="0.580028733120355"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.H" Col="Species.LinearMolecule.Excited.v=1.q" Value="0.580028732360674"/>
+    <Correlation Row="Species.LinearMolecule.Excited.v=1.H" Col="Species.LinearMolecule.Excited.v=1.D" Value="0.980445428468138"/>
+  </Correlations>
+  <Parameter Name="Temperature" Value="350"/>
+  <Parameter Name="Fmin" Value="711.899331768136"/>
+  <Parameter Name="Fmax" Value="714.417474303433"/>
+  <FormSettings Name="LineResidualWindow" XAxis="Frequency"/>
+  <FormSettings Name="ConstantsWindow" ActiveObject="Linear: Species - LinearMolecule - Excited - v=1"/>
+  <FormSettings Name="OverlayWindow" ActiveObject="ExperimentalPlot: Overlays - 69778494.par"/>
+</Mixture>
