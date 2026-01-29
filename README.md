@@ -1,7 +1,6 @@
 | File / Folder | Short description |
 |---|---|
 | `trash/` | Temporary or discarded working files |
-| `.DS_Store` | macOS Finder metadata file |
 | `69778494.par` | HITRAN data file for IR transitions |
 | `69787cd6.par` | HITRAN data file for sub-millimeter transitions |
 | `HCN_LinesPQR.pgo` | Main PGOPHER file for simulated spectrum |
